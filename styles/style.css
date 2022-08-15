@@ -9,40 +9,40 @@
 /* Primary Font */
 @font-face {
   font-family: "Poppins";
-  src: url(/styles/fonts/poppins/Poppins-Regular.ttf) format("truetype");
+  src: url(./fonts/poppins/Poppins-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "PopBol";
-  src: url(/styles/fonts/poppins/Poppins-Bold.ttf) format("truetype");
+  src: url(./fonts/poppins/Poppins-Bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "PopLi";
-  src: url(/styles/fonts/poppins/Poppins-Light.ttf) format("truetype");
+  src: url(./fonts/poppins/Poppins-Light.ttf) format("truetype");
 }
 
 /* Secondary Font */
 @font-face {
   font-family: "OpSan";
-  src: url(/styles/fonts/open_sans/OpenSans-Regular-webfont.woff) format("woff");
+  src: url(./fonts/open_sans/OpenSans-Regular-webfont.woff) format("woff");
 }
 
 @font-face {
   font-family: "OpSan-Bol";
-  src: url(/styles/fonts/open_sans/OpenSans-Bold-webfont.woff) format("woff");
+  src: url(./fonts/open_sans/OpenSans-Bold-webfont.woff) format("woff");
 }
 
 @font-face {
   font-family: "OpSan-SemBol";
-  src: url(/styles/fonts/open_sans/OpenSans-Semibold-webfont.woff)
-    format("woff");
+  src: url(./fonts/open_sans/OpenSans-Semibold-webfont.woff) format("woff");
 }
 
 /* Base Styles */
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: auto;
 }
 
 body {
@@ -97,7 +97,7 @@ a {
 
 /* Header and Navigation */
 .header {
-  background-image: url(/assets/images/backgrounds/waves/waves_on_header.svg);
+  background-image: url(../assets/images/backgrounds/waves/waves_on_header.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -254,7 +254,7 @@ main {
 
 /* Benefits */
 .benefits {
-  background-image: url(/assets/images/backgrounds/blobs/);
+  background-image: url(../assets/images/backgrounds/blobs/blobs_benefit.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -278,7 +278,7 @@ main {
 
 /* Services */
 .services {
-  background-image: url(/assets/images/backgrounds/waves/waves_on_services.svg);
+  background-image: url(../assets/images/backgrounds/waves/waves_on_services.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -358,7 +358,7 @@ main {
 
 /* Works */
 .works {
-  background-image: url(/assets/images/backgrounds/waves/waves_on_works.svg);
+  background-image: url(../assets/images/backgrounds/waves/waves_on_works.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -444,7 +444,7 @@ main {
 
 /* About */
 .about {
-  background-image: url(/assets/images/backgrounds/waves/waves_on_about.svg);
+  background-image: url(../assets/images/backgrounds/waves/waves_on_about.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -478,7 +478,7 @@ main {
 
 /* Contact */
 .contact {
-  background-image: url(/assets/images/backgrounds/waves/waves_on_contact.svg);
+  background-image: url(../assets/images/backgrounds/waves/waves_on_contact.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -518,7 +518,7 @@ main {
 
 /* Profile */
 .profile {
-  background-image: url(/assets/images/backgrounds/blobs/blobs_profile.svg);
+  background-image: url(../assets/images/backgrounds/blobs/blobs_profile.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -814,6 +814,10 @@ footer {
     transform: translateX(0%);
   }
 
+  .nav-list[data-visible="false"] {
+    transform: translateX(100);
+  }
+
   .nav-list li a {
     color: black;
   }
@@ -822,7 +826,7 @@ footer {
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    background-image: url(/assets/images/icons/navigation/hamburger_menu.svg);
+    background-image: url(../assets/images/icons/navigation/hamburger_menu.svg);
     background-repeat: no-repeat;
     background-color: transparent;
     border: 0;
@@ -838,7 +842,7 @@ footer {
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(/assets/images/icons/navigation/close_menu.svg);
+    background-image: url(../assets/images/icons/navigation/close_menu.svg);
   }
 }
 
@@ -879,6 +883,10 @@ footer {
   .landing-img img {
     width: 60%;
     height: 60%;
+  }
+
+  .mobile-nav-toggle {
+    z-index: 9999999;
   }
 
   /* Benefits */
@@ -1000,6 +1008,7 @@ footer {
 
   .content-wrapper {
     flex-direction: row-reverse;
+    margin-top: 10%;
   }
 
   .landing-img {
